@@ -39,7 +39,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 #     sys.exit()
 
 import subprocess
-subprocess.run("pip", "install", "wheel")
+subprocess.call(["pip", "install", "wheel"])
 
 packages = ['requests']
 
