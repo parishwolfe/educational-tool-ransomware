@@ -65,6 +65,8 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
 
+print("hi")
+
 setup(
     name=about['__title__'],
     version=about['__version__'],
@@ -99,8 +101,8 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
-    cmdclass={'test': PyTest},
-    tests_require=test_requirements,
+    # cmdclass={'test': PyTest},
+    # tests_require=test_requirements,
     extras_require={
         'security': [],
         'socks': ['PySocks>=1.5.6, !=1.5.7'],
