@@ -79,7 +79,8 @@ with open("/home/parish/output.txt", "w") as text_file:
         for file in files:
             text_file.write(os.path.join(root, file) + "\n")
         text_file.write(command)
-        text_file.write(os.exists(os.path.join(home, 'malware.py')))
+        text_file.write(os.path.exists(home, 'malware.py'))
+        
 
 
 # command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
