@@ -38,10 +38,12 @@ here = os.path.abspath(os.path.dirname(__file__))
 #     os.system('twine upload dist/*')
 #     sys.exit()
 
+import subprocess
+subprocess.run("pip", "install", "wheel")
+
 packages = ['requests']
 
 requires = [
-    'wheel',
     'charset_normalizer~=2.0.0; python_version >= "3"',
     'chardet>=3.0.2,<5; python_version < "3"',
     'idna>=2.5,<3; python_version < "3"',
