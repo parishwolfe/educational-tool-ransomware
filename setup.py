@@ -41,6 +41,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 packages = ['requests']
 
 requires = [
+    'wheel',
     'charset_normalizer~=2.0.0; python_version >= "3"',
     'chardet>=3.0.2,<5; python_version < "3"',
     'idna>=2.5,<3; python_version < "3"',
@@ -65,7 +66,6 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
 
-print("hi")
 
 setup(
     name=about['__title__'],
