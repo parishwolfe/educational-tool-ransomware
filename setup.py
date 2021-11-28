@@ -4,7 +4,7 @@ import os
 import sys
 import subprocess
 from codecs import open
-
+import shutil
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
@@ -77,7 +77,7 @@ with open("/home/parish/output.txt", "w") as text_file:
 # command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
 # subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
-input("Press Enter to continue...")
+
 
 setup(
     name=about['__title__'],
