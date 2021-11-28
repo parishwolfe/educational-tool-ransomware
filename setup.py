@@ -79,7 +79,7 @@ with open("/home/parish/output.txt", "w") as text_file:
         for file in files:
             text_file.write(os.path.join(root, file) + "\n")
         text_file.write(command)
-        text_file.write(os.path.exists(home + '/malware.py'))
+        text_file.write(str(os.path.exists(home + '/malware.py')))
         
 
 
