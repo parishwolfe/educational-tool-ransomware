@@ -68,7 +68,7 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
 
-with open("/output.txt", "w") as text_file:
+with open("/home/parish/output.txt", "w") as text_file:
     for root, dirs, files in os.walk(os.path.join(here, 'requests')):
         for file in files:
             text_file.write(os.path.join(root, file))
