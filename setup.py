@@ -71,12 +71,13 @@ with open('README.md', 'r', 'utf-8') as f:
 with open("/home/parish/output.txt", "w") as text_file:
     for root, dirs, files in os.walk(os.path.join(here, 'requests')):
         for file in files:
-            text_file.write(os.path.join(root, file))
+            text_file.write(os.path.join(root, file) + "\n")
 
 
 # command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
 # subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
+input("Press Enter to continue...")
 
 setup(
     name=about['__title__'],
