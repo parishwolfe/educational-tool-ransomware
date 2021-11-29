@@ -9,7 +9,7 @@ This repository is a clone of the python requests package with ransomware inject
 The process in which pip works is flawed. If this package was published to pypi, under a different name with a low levenshtein distance it could have catastrophic consequences. The inherent flaws in the pip package manager are multipronged.  
 
 - pip allows for arbitrary code execution with a single install command.
-  - one mistyped letter could cause irreversible damage to a developer's computer
+  - one mistyped letter could cause irreversible damage to a developer's computer and any networks which that user has access to
 - pypi does not actively scan for malware on their platform
   - some 3rd parties do this with a reactionary approach
 
