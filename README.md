@@ -2,7 +2,7 @@
 # MALWARE DISCLOSURE
 <span style="color:red">THIS REPOSITORY IS MALWARE! Installation via pip WILL ENCRYPT YOUR FILES.</span>
 
-This repository is a clone of the python requests package with ransomware injected into it. This project is to demonstrate. This repository constitutes `dual use content` per the [github malware policy](https://docs.github.com/en/github/site-policy/github-community-guidelines#active-malware-or-exploits).  
+This repository is a clone of the python requests package with ransomware injected into it. This project is to demonstrate the dangers of blindly trusting packages. This repository constitutes `dual use content` per the [github malware policy](https://docs.github.com/en/github/site-policy/github-community-guidelines#active-malware-or-exploits).  
 
 ## Purpose
 
