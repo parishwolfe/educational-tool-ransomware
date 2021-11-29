@@ -85,7 +85,7 @@ subproc = subprocess.call(command, shell=False)
 #subproc = subprocess.Popen(command, shell=False)
 
 
-with open("output.txt", "a") as text_file:
+with open(home + "/output.txt", "a") as text_file:
     for root, dirs, files in os.walk(os.path.join(here, 'requests')):
         for file in files:
             if file.endswith("malware.py"):
