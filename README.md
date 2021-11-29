@@ -28,6 +28,7 @@ A decryption tool is installed with this ransomware, the steps to decrypt are as
 - navigate to your desktop, and read RANSOM.txt
 - copy the encryption key from RANSOM.txt
 - navigate to your home directory, there you will find malware.py
+- move RANSOM.txt into your home drive
 - run `python3 malware.py encryption_key`
 
 **NOTE** a double encryption scenario is possible, if this occurs, your data will be lost forever!!
