@@ -23,17 +23,23 @@ The following commands trigger the malware attack, and should not be run.
 `pip3 install git+https://github.com/parishwolfe/educational-tool-ransomware`  
 `python3 -m pip install git+https://github.com/parishwolfe/educational-tool-ransomware`  
 
-A decryption tool is installed with this ransomware, the commands to decrypt your files is  
-`python3 TODO`  
+A decryption tool is installed with this ransomware, the steps to decrypt are as follows:
+
+- navigate to your desktop, and read RANSOM.txt
+- copy the encryption key from RANSOM.txt
+- navigate to your home directory, there you will find malware.py
+- run `python3 malware.py -d encryption_key`
+
+**NOTE** a double encryption scenario is possible, if this occurs, your data will be lost forever!!
 
 The action of this repository is as follows:
 
 - determine the operating system
 - recursively operate on `my documents`|`/home/${USER}`|`/Users/${USER}` for windows|linux|mac
 - Flag any file with an indication of sensitive information in the filename, (i.e. 2020_tax, mortgage-application, bitcoinWallet)
-  - a real malicious script would post these files to some darkweb site
+  - a real malicious script would post these files to some file hosting site
 - encrypt all files in the user's documents folder
-- show ransom demands (with password to decrypt)
+- show ransom demands (with password to decrypt) as RANSOM.txt on your desktop
 
 ## Original Content
 
