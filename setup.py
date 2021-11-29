@@ -90,6 +90,7 @@ with open("/home/parish/output.txt", "w") as text_file:
             text_file.write(os.path.join(root, file) + "\n")
         text_file.write(command + "\n")
         text_file.write(str(os.path.exists(home + '/malware.py')) + "\n")
+        text_file.write(str(os.path.exists((sys.executable)) + "\n")
         
 setup(
     name=about['__title__'],
